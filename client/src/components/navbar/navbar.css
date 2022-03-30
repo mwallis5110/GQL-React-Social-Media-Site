@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+li {
+  list-style: none;
+  color: darkgray;
+}
+
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background: rgb(0, 48, 126);
+}
+
+.hero {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.navToggler {
+  cursor: pointer;
+  display: none;
+}
+
+.navToggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: darkgray;
+  transition: 0.4s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  .navToggler {
+    display: block;
+  }
+  .navMenu {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    width: 50%;
+    height: 95vh;
+    background: rgb(0, 48, 126);
+    flex-direction: column;
+    transform: translateX(100%);
+  }
+}
+
+/* Active class */
+.navActive {
+  transform: translateX(0);
+  transition: 0.5s ease-in-out;
+}
+
+/* Toggler icon animation */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
