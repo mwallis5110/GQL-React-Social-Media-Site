@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./navbar.css";
 
@@ -12,15 +13,23 @@ export default function TopNavbar() {
       ? setActive("navMenu navActive")
       : setActive("navMenu");
 
-    toggleIcon === "navToggler" ? setToggleIcon("navToggler toggle") : setToggleIcon("navToggler")
+    toggleIcon === "navToggler"
+      ? setToggleIcon("navToggler toggle")
+      : setToggleIcon("navToggler");
   };
   return (
     <nav className="navWrapper">
       <p className="hero">Main Content</p>
       <ul className={active}>
-        <li className="homeButton">Home</li>
-        <li className="loginButton">Login</li>
-        <li className="registerButton">Register</li>
+        <li className="homeButton">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="loginButton">
+          <Link to="/login">Login</Link>
+        </li>
+        <li className="registerButton">
+          <Link to="/register">Register</Link>
+        </li>
       </ul>
       <div onClick={navToggle} className={toggleIcon}>
         <div className="line1"></div>

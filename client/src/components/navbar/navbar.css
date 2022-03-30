@@ -10,6 +10,7 @@ body {
 li {
   list-style: none;
   color: darkgray;
+  cursor: pointer;
 }
 
 .navWrapper {
@@ -17,7 +18,8 @@ li {
   align-items: center;
   justify-content: space-around;
   height: 8vh;
-  background: rgb(0, 48, 126);
+  /* background: rgb(0, 48, 126); */
+  border: 1px solid black;
 }
 
 .hero {
@@ -27,7 +29,7 @@ li {
 
 .navMenu {
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: space-around;
   gap: 3rem;
 }
